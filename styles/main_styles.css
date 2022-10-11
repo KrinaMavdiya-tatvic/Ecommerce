@@ -1439,7 +1439,7 @@ section
 	color: #FFFFFF;
 }
 .gdpr {
-  display: none;
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -1486,9 +1486,6 @@ section
   text-decoration: none;
   background-color: #27ae60;
   color: #f6f6f6;
-}
-.button:hover {
-  background-color: #34495e;
 }
 
 .checkboxes {
