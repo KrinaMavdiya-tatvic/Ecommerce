@@ -10,7 +10,11 @@ const firebaseConfig = {
   appId: "1:1037755442911:web:087d9d00aa75053f16ab6a"
 };
 
-firebase.initializeApp(firebaseConfig);
+// Initialize Firebase
+const firebaseApp = initializeApp(firebaseConfig);
+
+// Initialize Firebase Messaging
+const messaging = getMessaging(firebaseApp);
 
 function requestPermission() {
   console.log('Requesting permission...');
