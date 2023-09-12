@@ -14,3 +14,16 @@ function requestPermission() {
   Notification.requestPermission().then((permission) => {
     if (permission === 'granted') {
       console.log('Notification permission granted.');
+
+    // Generate a new set of VAPID keys
+webpush.generateVAPIDKeys().then(keys => {
+  console.log("Public Key:", keys.publicKey);
+  console.log("Private Key:", keys.privateKey);
+}).catch(error => {
+  console.error("Error generating VAPID keys:", error);
+});
+
+const vapidKey = "YOUR_GENERATED_PUBLIC_KEY";
+
+messaging.usePublicVapidKey(vapidKey);
+
