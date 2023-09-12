@@ -23,7 +23,7 @@ webpush.generateVAPIDKeys().then(keys => {
   console.error("Error generating VAPID keys:", error);
 });
 
-const vapidKey = "YOUR_GENERATED_PUBLIC_KEY";
+const vapidKey = keys.publicKey;
 
 messaging.usePublicVapidKey(vapidKey);
 
