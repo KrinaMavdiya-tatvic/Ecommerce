@@ -9,17 +9,8 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-const messaging = firebase.messaging();
-
-messaging.requestPermission()
-  .then(function () {
-    console.log("Notification permission granted.");
-    return messaging.getToken();
-  })
-  .then(function (token) {
-    console.log("FCM token:", token);
-    // Send this token to your server for future use.
-  })
-  .catch(function (err) {
-    console.error("Error getting permission:", err);
-  });
+function requestPermission() {
+  console.log('Requesting permission...');
+  Notification.requestPermission().then((permission) => {
+    if (permission === 'granted') {
+      console.log('Notification permission granted.');
