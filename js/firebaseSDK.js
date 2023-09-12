@@ -1,3 +1,6 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
+import { getMessaging } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-messaging.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyDmDTjCVd0Lp2N-AN0Tr19876m5rbrz_88",
   authDomain: "ecommerce-demo-306cc.firebaseapp.com",
